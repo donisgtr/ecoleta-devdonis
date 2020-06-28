@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% set pageId = "page-home" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+{% endblock styles %}
+
+{% block content %}
+    <div class="content">
+        <header>
+            <img src="/extras-aula-1/icones/logo.svg" alt="Logomarca">
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta
+            </a>
+        </header>
+        <main>
+            <h1>Seu marketplace de coleta de residuos</h1>
+
+            <p>ajudamos pessoas a encontrarem pontos de coleta eficiente.</p>
+
+            <a href="#">
+                <span></span>
+                <strong>Pesquisar pontos de coleta</strong>
+            </a>
+        </main>
+    </div>
+    {% block modal %}
+        {% include "partial/modal.html" %}
+    {% endblock modal %}
+
+{% endblock content %}
+
+{% block scrips %}
+    <script src="scripts/index.js"></script>
+{% endblock scrips %}
